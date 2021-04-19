@@ -1,0 +1,16 @@
+.login-page{
+    background-image: url(../../images/loginBg2.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.login-page::before{
+    position: absolute;
+    content: "";
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: #10386F;
+    opacity: .8;
+    z-index: -1;
+}

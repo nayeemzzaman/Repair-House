@@ -1,0 +1,16 @@
+.header-container{
+    height: 800px;
+    position: relative;
+    background-image: url('../../../images/banner-top.jpg');
+    background-size: cover;
+}
+.header-container::before {
+    height:800px;
+    content:' ';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    left: 0;
+    background-color: #10386F;
+    opacity: 0.9;
+}

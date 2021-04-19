@@ -1,0 +1,12 @@
+.navbar-dark{
+    background: rgb(0, 0, 0, 0.8);
+    height: 100px;
+}
+.nav-link{
+    padding: 0px;
+    height: 25px;
+}
+.nav-link:hover{
+    color: orange !important;
+    border-bottom: 2px solid orange;
+}

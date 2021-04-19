@@ -1,0 +1,9 @@
+.phone{
+    height: 280px;
+}
+.phone:hover .phone-name{
+    color: orange;
+}
+.phone:hover img{
+    height: 140px !important;
+}
