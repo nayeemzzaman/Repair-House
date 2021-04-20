@@ -34,7 +34,7 @@ const SimpleCardForm = ({handlePayment}) => {
         <div>
             <form onSubmit={handleSubmit}>
                 <CardElement />
-                <button style={{width:'100px', border:'2px solid blue'}} className="btn-brand" type="submit" disabled={!stripe}>
+                <button style={{width:'100px', border:'2px solid blue'}} className="btn-brand mt-4 mb-4" type="submit" disabled={!stripe}>
                     Pay
                 </button>
             </form>

@@ -1,0 +1,29 @@
+
+.service-details{
+    box-shadow: 0;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    transition: box-shadow 0.5s ease-in;
+}
+.service-details:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* .service-details img{
+    transition: width 1s linear 0;
+}
+.service-details img:hover{
+    width: 130px;
+} */
+.image-style{
+    height: 120px; 
+    width: 120px;
+    border-radius: 50%;
+
+}
+
+@media(max-width: 600px){
+    .serviceBtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

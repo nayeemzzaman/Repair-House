@@ -4,29 +4,21 @@ import './Testimonials.css';
 import wilson from '../../../images/wilson.png';
 import ema from '../../../images/ema.png';
 import aliza from '../../../images/aliza.png';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-const testimonialData = [
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Wilson Harry',
-        from : 'California',
-        img : wilson
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Ema Gomez',
-        from : 'California',
-        img : ema
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-        name : 'Aliza Farari',
-        from : 'California',
-        img : aliza
-    }
-]
+
 
 const Testimonials = () => {
+    const [reviews, setReviews] = useState([]);
+    useEffect( ()=>{
+        fetch('https://stormy-lake-37349.herokuapp.com/reviews')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setReviews(data)
+        })
+    }, [])
     return (
        <section className="testimonials my-5 py-5">
            <div className="container">
@@ -36,7 +28,7 @@ const Testimonials = () => {
                </div>
                <div className="card-deck mt-5">
                     {
-                        testimonialData.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.name}/>)
+                        reviews.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.name}/>)
                     }
                 </div>
            </div>

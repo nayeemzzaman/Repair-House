@@ -1,3 +1,9 @@
 .aboutUs{
     background-color: rgb(255, 166, 0, 0.7);
+    
+}
+@media (max-width: 600px){
+   .aboutUs{
+    text-align: center;
+   }
 }

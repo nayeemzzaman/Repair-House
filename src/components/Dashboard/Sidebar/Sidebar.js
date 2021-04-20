@@ -12,7 +12,7 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:4000/isAdmin', {
+        fetch('https://stormy-lake-37349.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -23,11 +23,7 @@ const Sidebar = () => {
     return (
         <div className="sidebar d-flex flex-column justify-content-between py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
-                <li>
-                    <Link to="/dashboard" className="text-white">
-                        <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span>
-                    </Link>
-                </li>
+                
                 <li>
                     <Link to="/home" className="text-white">
                         <FontAwesomeIcon icon={faHome} /> <span>Home</span>
@@ -35,12 +31,12 @@ const Sidebar = () => {
                 </li>
                 {isAdmin ? <div>
                                 <li>
-                                    <Link to="/allPatients" className="text-white">
+                                    <Link to="/allOrderList" className="text-white">
                                         <FontAwesomeIcon icon={faCalendar} /> <span>Order List</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/patient" className="text-white">
+                                    <Link to="/makeAdmin" className="text-white">
                                         <FontAwesomeIcon icon={faUsers} /> <span>Make Admin</span>
                                     </Link>
                                 </li>
@@ -51,7 +47,7 @@ const Sidebar = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/doctor/setting" className="text-white" >
+                                    <Link to="/manageService" className="text-white" >
                                         <FontAwesomeIcon icon={faCog} /> <span>Manage Services</span>
                                     </Link>
                                 </li>
@@ -64,8 +60,8 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/bookingList" className="text-white" >
-                                <FontAwesomeIcon icon={faListUl} /> <span>Booking list</span>
+                            <Link to="/orderList" className="text-white" >
+                                <FontAwesomeIcon icon={faListUl} /> <span>Order list</span>
                             </Link>
                         </li>
                         <li>
