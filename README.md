@@ -7,3 +7,6 @@ In user dashboard user can order an item by submitting all necessary requirement
 In admin section an admin can add another admin if needed. An admin can add any service for the users even an admin can manage the service as shop availability. User also update service status for an order.
 ### `Website link`
 https://repair-house-73331.web.app/
+
+### Technology
+Technology: JavaScript, React, Node.js, Express.js, Bootstrap, MongoDB,     Firebase Authentication, Stripe.js, Heroku.

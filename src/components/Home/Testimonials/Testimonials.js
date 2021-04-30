@@ -26,7 +26,7 @@ const Testimonials = () => {
                    <h1 className="text-brand"style={{fontWeight:'700'}}>Testimonials form Our Clients</h1>
                    <p style={{color: 'lightgray'}}>Lorem ipsum dolor sit amet consectetur<br/>Lorem ipsum dolor sit amet.</p>
                </div>
-               <div className="card-deck mt-5">
+               <div className="row mt-5">
                     {
                         reviews.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.name}/>)
                     }

@@ -9,7 +9,7 @@ const Testimonial = ({testimonial}) => {
     };
 
     return (
-        <div className="card testimonial-style">
+        <div className="card col-md-4 mb-4 testimonial-style">
             <div className="card-footer d-flex  align-items-center justify-content-center">
                 <img style={imageStyle} className="mx-3" src={photo} alt=""/>
                 
@@ -19,7 +19,7 @@ const Testimonial = ({testimonial}) => {
                 </div>
             </div>
             <div className="card-body">
-                <p className="card-text text-center">{reviewData.review}</p>
+                <p className="card-text ">{reviewData.review}</p>
             </div>
             
        </div>
